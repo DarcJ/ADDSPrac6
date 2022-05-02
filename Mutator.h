@@ -10,7 +10,7 @@ class Mutator {
 
     public:
     Mutator();
-    virtual Individual mutate(Individual I, int k);
+    virtual Individual mutate(Individual I, int k)=0;
     ~Mutator();
 
 };
