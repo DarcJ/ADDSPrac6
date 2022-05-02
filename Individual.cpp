@@ -49,18 +49,30 @@ int Individual::getMaxOnes(){
 
     int maxCount = 0;
 
-    for (int i = 0; i < binaryString.size(); i++)
+    for (int i = 0; i < binaryString.length(); i++)
     {
-        if (binaryString[i] == 1)
+        if (binaryString[i] == '1')
         {
-            maxCount++;
-        }
-        else if (binaryString[i] == 0)
-        {
-            maxCount = 0;
+            int temp = 1;
+            if (i < binaryString.length()-1)
+            {
+                int j = i+1;
+                while (j < binaryString.length() && binaryString[j]== '1')
+                {
+                    temp++;
+                    j++;
+                    i++;
+                }
+                
+            }
+            
+            if (temp > maxCount)
+            {
+                maxCount = temp;
+            }
+            
         }
     }
-
     return maxCount;
 }
 int Individual::getLength(){
