@@ -1,5 +1,4 @@
 #include "BitFlip.h"
-#include <iostream>
 
 BitFlip::BitFlip()
 {
