@@ -1,7 +1,7 @@
-#include "Mutator.h"
 #ifndef BITFLIPPROB_H
 #define BITFLIPPROB_H
 
+#include "Mutator.h"
 #include <string>
 #include <ctime>
 #include <stdlib.h>
