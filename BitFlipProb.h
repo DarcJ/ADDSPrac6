@@ -8,7 +8,7 @@ class BitFlipProb : public Mutator{
 
     public:
     BitFlipProb();
-    std::string mutate(int k, Individual I);
+    std::string mutate(int p, Individual I);
     ~BitFlipProb();
 
 };

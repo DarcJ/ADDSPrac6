@@ -9,7 +9,7 @@ class Mutator {
 
     public:
     Mutator();
-    virtual std::string mutate(int k, Individual);
+    virtual std::string mutate(int k, Individual I);
     ~Mutator();
 
 };

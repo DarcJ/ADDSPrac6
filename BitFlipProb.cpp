@@ -3,16 +3,19 @@
 BitFlipProb::BitFlipProb()
 {
 }
-std::string BitFlipProb::mutate(int k, Individual I){
+std::string BitFlipProb::mutate(int p, Individual I){
     
-    if (k > I.getLength())
-    {
-        k = k - I.getLength();
-    }
-    
-    I.flipBit(k);
+	std::string DNAStrand = I.getString(); 
+	Individual offspring(DNAStrand);
 
-    return I.getString();
+	for (int i =1; i < offspring.getLength()+1; i++ ) {
+		double randNum = ((double) rand() / (RAND_MAX));
+		if(randNum >= p) {
+			offspring.flipBit(i); 
+		}
+	}
+
+	return offspring.getString();
 }
 BitFlipProb::~BitFlipProb()
 {

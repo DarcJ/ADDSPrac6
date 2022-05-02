@@ -59,9 +59,9 @@ int Individual::getMaxOnes(){
         {
             maxCount = 0;
         }
-        return maxCount;
-   
     }
+
+    return maxCount;
 }
 int Individual::getLength(){
 
