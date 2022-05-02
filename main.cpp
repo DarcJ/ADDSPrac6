@@ -28,8 +28,8 @@ int main()
 
     Individual * I1 = new Individual(binarystr1);
     Individual * I2 = new Individual(binarystr2);
-    BitFlip * BFlip = new BitFlip();
-    Rearrange * R = new Rearrange();
+    Mutator * BFlip = new BitFlip();
+    Mutator * R = new Rearrange();
 
     Individual * offspring1 = new Individual(1);
     Individual * offspring2 = new Individual(1);
@@ -39,5 +39,4 @@ int main()
 
     std::cout << offspring1->getString() << " " << offspring2->getString() << " " << offspring2->getMaxOnes() << std::endl;
 
-    return 0;
 }
