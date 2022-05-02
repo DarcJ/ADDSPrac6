@@ -13,7 +13,7 @@ Individual Rearrange::mutate(Individual I, int k){
 	std::string combinedString;
 
 	if (k > DNAstrand.length()) {
-		k = k%DNAstrand.length();
+		k = k - DNAstrand.length();
 	}
 
 	if (k == DNAstrand.length()) {
