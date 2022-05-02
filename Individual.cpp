@@ -1,7 +1,22 @@
 #include "Individual.h"
 
-Individual::Individual()
+Individual::Individual(int len)
 {
+    std::string binaryString[len];
+    for (int i = 0; i < len+1; i++)
+    {
+        binaryString[i] = '0';
+    }
+    
+}
+Individual::Individual(std::string bString){
+
+    int blength = bString.size();
+
+    Individual newIndividual(blength);
+    
+
+
 }
 
 std::string Individual::getString(){
@@ -23,11 +38,41 @@ int Individual::getBit(int pos){
 }
 void Individual::flipBit(int pos){
 
+    switch (binaryString[pos])
+    {
+    case 0:
+        binaryString[pos] = 1;
+        break;
+    case 1:
+        binaryString[pos] = 0;
+    default:
+        break;
+    }
+
 }
 int Individual::getMaxOnes(){
 
+    int maxCount = 0;
+
+    for (int i = 0; i < binaryString.size(); i++)
+    {
+        if (binaryString[i] == 1)
+        {
+            maxCount++;
+        }
+        else if (binaryString[i] == 0)
+        {
+            maxCount = 0;
+        }
+        return maxCount;
+   
+    }
 }
 int Individual::getLength(){
+
+    int length = binaryString.size();
+
+    return length;
 
 }
 

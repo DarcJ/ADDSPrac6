@@ -7,7 +7,8 @@ class Individual {
 
     public:
     std::string binaryString;
-    Individual();
+    Individual(int len);
+    Individual(std::string bString);
     std::string getString();
     int getBit(int pos);
     void flipBit(int pos);
