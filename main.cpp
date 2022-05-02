@@ -25,9 +25,8 @@ int main()
     int k1;
     int k2;
 
-    //std::cout << "Please enter strings and integers" << std::endl;
     cin >> binarystr1;
-    cin >> k1;
+    cin >> k1; 
     cin >> binarystr2;
     cin >> k2;
 
@@ -44,6 +43,8 @@ int main()
 
     cout << offspring1->getString() << " ";
     cout << offspring2->getString() << " " ;
-    cout << offspring2->getMaxOnes();
+    cout << offspring2->getMaxOnes() << "\n";
+
+
 
 }

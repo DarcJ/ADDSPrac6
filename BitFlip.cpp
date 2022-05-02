@@ -1,4 +1,3 @@
-#include "Individual.h"
 #include "Mutator.h"
 #include "BitFlip.h"
 

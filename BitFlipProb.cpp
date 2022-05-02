@@ -19,10 +19,10 @@ Individual BitFlipProb::mutate(Individual I, int k){
 	std::string DNAStrand = I.getString(); 
 	Individual offspring(DNAStrand);
 
-	for (int i =1; i < offspring.getLength()+1; i++ ) {
+	for (int j =1; j < offspring.getLength()+1; j++ ) {
 		double randNum = ((double) rand() / (RAND_MAX));
 		if(randNum >= p) {
-			offspring.flipBit(i); 
+			offspring.flipBit(j); 
 		}
 	}
 
