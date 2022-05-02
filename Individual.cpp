@@ -2,20 +2,15 @@
 
 Individual::Individual(int len)
 {
-    std::string binaryString[len];
-    for (int i = 0; i < len+1; i++)
+    for (int i = 0; i < len; i++)
     {
-        binaryString[i] = '0';
+        this->binaryString = this->binaryString + "0";
     }
     
 }
 Individual::Individual(std::string bString){
 
-    int blength = bString.size();
-
-    Individual newIndividual(blength);
-    
-
+    this->binaryString = bString;
 
 }
 
