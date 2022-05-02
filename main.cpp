@@ -25,6 +25,8 @@ int main()
     int k1;
     int k2;
 
+    cout << "Please Enter Values: " ;
+
     cin >> binarystr1;
     cin >> k1; 
     cin >> binarystr2;
