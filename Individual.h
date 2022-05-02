@@ -4,9 +4,8 @@
 
 class Individual {
     private:
-
-    public:
     std::string binaryString;
+    public:
     Individual(int len);
     Individual(std::string bString);
     std::string getString();
