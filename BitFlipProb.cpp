@@ -15,7 +15,7 @@ Individual BitFlipProb::mutate(int p, Individual I){
 		}
 	}
 
-	return offspring.getString();
+	return offspring;
 }
 BitFlipProb::~BitFlipProb()
 {

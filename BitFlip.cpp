@@ -1,4 +1,5 @@
 #include "BitFlip.h"
+#include <iostream>
 
 BitFlip::BitFlip()
 {
@@ -8,16 +9,12 @@ Individual BitFlip::mutate(int k, Individual I){
     std::string DNAstrand = I.getString();
     Individual offspring(DNAstrand);
 
-    if (k <= offspring.getLength())
+    if (k > offspring.getLength())
     {
-        offspring.flipBit(k);
+        k = k - offspring.getLength();
     }
-    
-    else if (k > I.getLength())
-    {
-        k = k%offspring.getLength();
-        offspring.flipBit(k);
-    }
+
+    offspring.flipBit(k);
 
     return offspring;
 }

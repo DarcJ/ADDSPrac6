@@ -32,17 +32,22 @@ int Individual::getBit(int pos){
 
 }
 void Individual::flipBit(int pos){
-
-    switch (binaryString[pos])
+    
+    if (pos <= binaryString.length())
     {
-    case 0:
-        binaryString[pos] = 1;
-        break;
-    case 1:
-        binaryString[pos] = 0;
-    default:
-        break;
+        switch (binaryString[pos-1])
+        {
+        case '0':
+            binaryString[pos-1] = '1';
+            break;
+        case '1':
+            binaryString[pos-1] = '0';
+            break;
+        default:
+            break;
+        }
     }
+
 
 }
 int Individual::getMaxOnes(){
