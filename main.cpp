@@ -44,6 +44,6 @@ int main()
 
     cout << offspring1->getString() << " ";
     cout << offspring2->getString() << " " ;
-    cout << offspring2->getMaxOnes() << endl;
+    cout << offspring2->getMaxOnes();
 
 }
