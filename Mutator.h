@@ -1,7 +1,8 @@
+#include "Individual.h"
+
 #ifndef MUTATOR_H
 #define MUTATOR_H
 
-#include "Individual.h"
 #include <string>
 
 class Mutator {
