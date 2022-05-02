@@ -8,7 +8,7 @@ class Rearrange: public Mutator{
 
     public:
     Rearrange();
-    Individual mutate(int k, Individual I);
+    Individual mutate(Individual I, int k);
     ~Rearrange();
 
 };

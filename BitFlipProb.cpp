@@ -3,7 +3,7 @@
 BitFlipProb::BitFlipProb()
 {
 }
-Individual BitFlipProb::mutate(int p, Individual I){
+Individual BitFlipProb::mutate(Individual I, int p){
     
 	std::string DNAStrand = I.getString(); 
 	Individual offspring(DNAStrand);

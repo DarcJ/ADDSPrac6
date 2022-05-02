@@ -3,7 +3,7 @@
 BitFlip::BitFlip()
 {
 }
-Individual BitFlip::mutate(int k, Individual I){
+Individual BitFlip::mutate(Individual I, int k){
     
     std::string DNAstrand = I.getString();
     Individual offspring(DNAstrand);

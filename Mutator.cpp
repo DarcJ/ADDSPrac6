@@ -4,7 +4,7 @@ Mutator::Mutator()
 {
 }
 
-Individual Mutator::mutate(int k, Individual I){
+Individual Mutator::mutate(Individual I, int k){
 
     return I;
 }

@@ -8,7 +8,7 @@ class BitFlipProb : public Mutator{
 
     public:
     BitFlipProb();
-    Individual mutate(int p, Individual I);
+    Individual mutate( ndividual I, int p);
     ~BitFlipProb();
 
 };

@@ -11,7 +11,7 @@ using namespace std;
 
 Individual * execute(Individual * indPtr, Mutator * mPtr, int k) { 
 	Individual * offspring = new Individual(1);
-	*offspring = mPtr->mutate(k, *indPtr);
+	*offspring = mPtr->mutate(*indPtr, k);
 	
 	return offspring;
 
