@@ -1,4 +1,3 @@
-#include "Mutator.h"
 #include "BitFlip.h"
 
 BitFlip::BitFlip()

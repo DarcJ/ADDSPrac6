@@ -1,8 +1,5 @@
 #include "BitFlipProb.h"
 
-#include <string>
-#include <ctime>
-#include <stdlib.h>
 
 BitFlipProb::BitFlipProb()
 {
@@ -11,7 +8,7 @@ BitFlipProb::BitFlipProb()
 }
 
 BitFlipProb::BitFlipProb(double prob){
-    prob = p;
+    p = prob;
 }
 
 Individual BitFlipProb::mutate(Individual I, int k){
