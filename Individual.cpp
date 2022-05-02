@@ -25,7 +25,7 @@ int Individual::getBit(int pos){
         return -1;
     }
 
-    int bValue = (int) (binaryString[pos]);
+    int bValue = (int) (binaryString[pos-1]);
 
     return bValue;
     
