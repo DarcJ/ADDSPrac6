@@ -4,13 +4,13 @@ Individual::Individual(int len)
 {
     for (int i = 0; i < len; i++)
     {
-        binaryString[i] = '0';
+        this->binaryString = this->binaryString +'0';
     }
     
 }
 Individual::Individual(std::string bString){
 
-    binaryString = bString;
+    this->binaryString = bString;
 
 }
 
