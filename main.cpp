@@ -5,7 +5,7 @@
 #include "Rearrange.h"
 
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -35,13 +35,14 @@ int main()
     Mutator * bitflip = new BitFlip();
     Mutator * rearrange = new Rearrange();
 
-    Individual offspring1(1) = execute(I1, bitflip, k1);
-    Individual offspring2(1) = execute(I2, rearrange, k2);
+    Individual * offspring1 = new Individual(1);
+    Individual * offspring2 = new Individual(1);
 
-    cout << offspring1.getString() << " ";
-    cout << offspring2.getString() << " " ;
-    cout << offspring2.getMaxOnes() << "\n";
+    offspring1 = execute(I1, bitflip, k1);
+    offspring2 = execute(I2, rearrange, k2);
 
+    cout << offspring1->getString() << " " << offspring2->getString() << " " << offspring2->getMaxOnes() << endl;
 
+    return 0;
 
 }
