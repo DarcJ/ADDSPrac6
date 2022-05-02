@@ -5,10 +5,12 @@
 
 class BitFlipProb : public Mutator{
     private:
+    double p;
 
     public:
     BitFlipProb();
-    Individual mutate(Individual I, double p);
+    BitFlipProb(double prob);
+    Individual mutate(Individual I,int k);
     ~BitFlipProb();
 
 };
