@@ -4,9 +4,9 @@ Mutator::Mutator()
 {
 }
 
-std::string Mutator::mutate(int k, Individual I){
+Individual Mutator::mutate(int k, Individual I){
 
-    return 0;
+    return I;
 }
 
 

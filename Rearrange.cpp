@@ -4,7 +4,7 @@ Rearrange::Rearrange()
 {
 }
 
-std::string Rearrange::mutate(int k, Individual I){
+Individual Rearrange::mutate(int k, Individual I){
 
     std::string DNAstrand;
 	DNAstrand = I.getString(); 
@@ -45,7 +45,7 @@ std::string Rearrange::mutate(int k, Individual I){
 
 	Individual offspring(combinedString);
 	
-	return offspring.getString();
+	return offspring;
     
 }
 

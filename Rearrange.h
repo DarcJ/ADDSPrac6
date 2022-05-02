@@ -8,7 +8,7 @@ class Rearrange: public Mutator{
 
     public:
     Rearrange();
-    std::string mutate(int k, Individual I);
+    Individual mutate(int k, Individual I);
     ~Rearrange();
 
 };

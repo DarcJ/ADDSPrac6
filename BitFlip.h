@@ -8,7 +8,7 @@ class BitFlip : public Mutator{
 
     public:
     BitFlip();
-    std::string mutate(int k, Individual I);
+    Individual mutate(int k, Individual I);
     ~BitFlip();
 
 };

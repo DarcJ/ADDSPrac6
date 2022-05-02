@@ -28,7 +28,7 @@ int main()
 
     Individual * I1 = new Individual(binarystr1);
     Individual * I2 = new Individual(binarystr2);
-    Mutator * BFlip = new BitFlip();
+    BitFlip * BFlip = new BitFlip();
     Rearrange * R = new Rearrange();
 
     Individual * offspring1 = new Individual(1);

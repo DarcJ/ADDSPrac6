@@ -3,19 +3,23 @@
 BitFlip::BitFlip()
 {
 }
-std::string BitFlip::mutate(int k, Individual I){
+Individual BitFlip::mutate(int k, Individual I){
     
     std::string DNAstrand = I.getString();
     Individual offspring(DNAstrand);
 
-    if (k > I.getLength())
+    if (k <= offspring.getLength())
     {
-        k = k - I.getLength();
+        offspring.flipBit(k);
     }
     
-    offspring.flipBit(k);
+    else if (k > I.getLength())
+    {
+        k = k%offspring.getLength();
+        offspring.flipBit(k);
+    }
 
-    return offspring.getString();
+    return offspring;
 }
 BitFlip::~BitFlip()
 {
