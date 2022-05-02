@@ -23,7 +23,7 @@ int main()
     int k1;
     int k2;
 
-    std::cout << "Please enter strings and integers" << std::endl;
+    //std::cout << "Please enter strings and integers" << std::endl;
     std::cin >> binarystr1 >> k1 >> binarystr2 >> k2;
 
     Individual * I1 = new Individual(binarystr1);
