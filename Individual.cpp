@@ -20,11 +20,15 @@ std::string Individual::getString(){
 }
 int Individual::getBit(int pos){
 
+    int bValue = 0;
     if (pos > binaryString.length()) {
 		return -1;
-	} else {
-		return binaryString.at(pos-1) - '0';
-	}
+    }
+    bValue = binaryString.at(pos) - '0';
+
+    return bValue;
+
+
     
 }
 void Individual::flipBit(int pos){
