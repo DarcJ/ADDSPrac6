@@ -44,6 +44,7 @@ int main()
     offspring2 = execute(I2, rearrange, k2);
 
     cout << offspring1->getString() << " " << offspring2->getString() << " " << offspring2->getMaxOnes() << endl;
+    cout << offspring1->getBit(1) << endl;
 
     return 0;
 

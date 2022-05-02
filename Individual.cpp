@@ -4,13 +4,13 @@ Individual::Individual(int len)
 {
     for (int i = 0; i < len; i++)
     {
-        this->binaryString = this->binaryString + "0";
+        binaryString[i] = '0';
     }
     
 }
 Individual::Individual(std::string bString){
 
-    this->binaryString = bString;
+    binaryString = bString;
 
 }
 
@@ -20,16 +20,12 @@ std::string Individual::getString(){
 }
 int Individual::getBit(int pos){
 
-    if ((pos > binaryString.size())||(pos < 0))
-    {
-        return -1;
-    }
-
-    int bValue = (int) (binaryString[pos-1]);
-
-    return bValue;
+    if (pos > binaryString.length()) {
+		return -1;
+	} else {
+		return binaryString.at(pos-1) - '0';
+	}
     
-
 }
 void Individual::flipBit(int pos){
     
