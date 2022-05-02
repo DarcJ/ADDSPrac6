@@ -25,25 +25,33 @@ int main()
     int k1;
     int k2;
 
-    cout << "Please Enter Values: " ;
-
     cin >> binarystr1;
     cin >> k1; 
     cin >> binarystr2;
     cin >> k2;
 
-    Individual * I1 = new Individual(binarystr1);
-    Individual * I2 = new Individual(binarystr2);
-    Mutator * bitflip = new BitFlip();
-    Mutator * rearrange = new Rearrange();
+    BitFlip bitflip;
+    Mutator * bfptr;
+    bfptr = &bitflip;
 
-    Individual * offspring1 = new Individual(1);
-    Individual * offspring2 = new Individual(1);
+    Rearrange rearrange;
+    Mutator * rptr;
+    rptr = &rearrange;
 
-    offspring1 = execute(I1, bitflip, k1);
-    offspring2 = execute(I2, rearrange, k2);
+    Individual I1(binarystr1);
+    Individual * ptr1 = &I1;
 
-    cout << offspring1->getString() << " " << offspring2->getString() << " " << offspring2->getMaxOnes() << endl;
+    Individual I2(binarystr2);
+    Individual * ptr2 = &I2;
+
+    Individual * offspring1 = execute(ptr1, bfptr, k1);
+    Individual * offspring2 = execute(ptr2, rptr, k2);
+
+    string mutation1 = offspring1->getString();
+    string mutation2 = offspring2->getString();
+    int i = offspring2->getMaxOnes();
+
+    cout << mutation1 << " " << mutation2 << " " << i << endl;
 
     return 0;
 
